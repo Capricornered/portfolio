@@ -1,27 +1,3 @@
-// logo scripts
-
-let logo = document.getElementById("logo");
-
-// default to hidden logo on page load
-
-window.onload = function() {
-    logo.className = "hide";
-}
-
-// show logo only after scrolling 100px
-
-function logoScroll() {
-    let y = window.scrollY;
-    if (y >= 100) {
-        logo.className = "show"
-    } else {
-        logo.className = "hide";
-        logo.style.transition = ".5s"; // avoids transition happening on page load - instead only happens when scrolling back up
-    }
-}
-
-window.addEventListener("scroll", logoScroll);
-
 // navigation scripts
 
 let nav = document.getElementById("menu");
@@ -53,13 +29,30 @@ let featureBox = document.getElementById("featured-work");
 let leftArrow = document.getElementById("left");
 let rightArrow = document.getElementById("right");
 
-leftArrow.onclick = function() {
-    featureBox.scrollLeft += 200;
+leftArrow.onclick = function left() {
+    featureBox.scrollLeft -= 300;
 };
 
-rightArrow.onclick = function() {
-    featureBox.scrollLeft -= 200;
+rightArrow.onclick = function right() {
+    featureBox.scrollLeft += 300;
+    return true;
 };
 
+function featureScroll() {
+    let x = featureBox.scrollLeft;
+    let featureWidth = featureBox.clientWidth;
 
+    if (x < 1 * featureWidth) {
+        leftArrow.classList.add("arrow-not-used");
+    } else {
+        leftArrow.classList.remove("arrow-not-used");
+    }
 
+    if (x > 2 * featureWidth) {
+        rightArrow.classList.add("arrow-not-used");
+    } else {
+        rightArrow.classList.remove("arrow-not-used");
+    }
+}
+
+featureBox.addEventListener("scroll", featureScroll);
