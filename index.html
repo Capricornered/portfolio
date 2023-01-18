@@ -5,13 +5,17 @@
 <head>
 
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property=”og:image” content=”https://i.imgur.com/angQLNL.jpg”>
 
     <link rel="stylesheet" href="https://use.typekit.net/hxn1tvm.css">
-    <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+
+    <link rel="icon" href="images/bio-pic-rosie.jpg" type="image/icon type">
     
-    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/scripts.js" async></script>
     <script src="scripts/home-scripts.js" defer></script>
     
     <title>Joelle Shapiro | Portfolio</title>
@@ -20,11 +24,13 @@
 
 <body>
     
-    <header>
+    <div id="block-name"></div>
+    
+    <header id="head">
 
         <span id="logo"><a href="#">Joelle Shapiro</a></span>
         
-        <img id="hamburger" src="images/hamburger.svg" alt="hamburger icon">
+        <img id="hamburger" src="images/hamburger.png" alt="hamburger icon">
     
     </header>
     
@@ -36,8 +42,8 @@
     
         <div class="links-out">
     
-            <a class="button" href="https://github.com/Capricornered"><img src="images/github-logo-red.png" alt="GitHub"></a>
-            <a class="button" href="https://www.linkedin.com/in/joelle-shapiro/"><img src="images/linkedin-logo-red.png" alt="LinkedIn"></a>
+            <a class="round-button-light" href="https://github.com/Capricornered"><img src="images/github-logo-blue.png" alt="GitHub"></a>
+            <a class="round-button-light" href="https://www.linkedin.com/in/joelle-shapiro/"><img src="images/linkedin-logo-blue.png" alt="LinkedIn"></a>
     
         </div>
     
@@ -54,8 +60,8 @@
                 <span id="title">Web Designer & Developer</span>
         
                 <div class="links-out">
-                    <a class="button" href="https://github.com/Capricornered"><img src="images/github-logo-pink.png" alt="GitHub"></a>
-                    <a class="button" href="https://www.linkedin.com/in/joelle-shapiro/"><img src="images/linkedin-logo-pink.png" alt="LinkedIn"></a>
+                    <a class="round-button-dark" href="https://github.com/Capricornered"><img src="images/github-logo-gray.png" alt="GitHub"></a>
+                    <a class="round-button-dark" href="https://www.linkedin.com/in/joelle-shapiro/"><img src="images/linkedin-logo-gray.png" alt="LinkedIn"></a>
                 </div>
 
             </div>
@@ -98,7 +104,7 @@
     
             <h2>Featured Work</h2>
 
-            <div class="arrows">
+            <div id="arrows">
                 <div class="arrow" id="left">
                     &#8249;
                 </div>
@@ -109,12 +115,12 @@
     
             <div id="featured-work">
     
-                <div class="feature">
+                <div class="port-card">
     
                     <h3>SBIT Redesign</h3>
     
-                    <a href="#">
-                        <img src="images/sbit-mockup-display2.png" alt="Sample image of featured material">
+                    <a href="work/reynolds-sbit.html">
+                        <img src="images/sbit/sbit-mockup-display2.png" alt="Sample image of featured material">
                     </a>
     
                     <p>
@@ -125,41 +131,41 @@
     
                 </div>
     
-                <div class="feature">
+                <div class="port-card">
     
                     <h3>Demopets</h3>
     
-                    <a href="#">
-                        <img src="images/demopets-mockup-display2.png" alt="Sample image of featured material">
+                    <a href="work/demopets.html">
+                        <img src="images/demopets/demopets-mockup-display2.png" alt="Sample image of featured material">
                     </a>
     
                     <p>
-                        The bones of a virtual pet site created as part of the coursework in ART 117 at Brightpoint Community College. While not a functioning site, this project was meant to give the basic idea of what a new virtual pet game might look/act like.
+                        The bones of a virtual pet site created as part of my web design coursework. While not a functioning site, this project was meant to give the basic idea of what a new virtual pet game might look/act like.
                     </p>
     
                     <span class="tags">HTML, CSS, JavaScript</span>
     
                 </div>
     
-                <div class="feature">
+                <div class="port-card">
     
-                    <h3>Wedding Site</h3>
+                    <h3>CTE Reverse Career Fair</h3>
     
-                    <a href="#">
-                        <img src="images/portfolio-ss-1.png" alt="Sample image of featured material">
+                    <a href="work/cte-reverse-career-fair.html">
+                        <img src="images/cte-reverse-fair/reverse-career-fair-cover.png" alt="Sample image of featured material">
                     </a>
     
                     <p>
-                        Personal wedding site created alongside coursework for ART 116 at Brightpoint Community College. This is a static site created for desktop as the coursework did not yet include responsive design.
+                        Materials created for the CTE Reverse Career Fair in 2022. This was mainly a booklet given to potential employers that attended the fair, but includes a flyer created for the signing day as well.
                     </p>
     
-                    <span class="tags">HTML, CSS</span>
+                    <span class="tags">Procreate, Adobe Illustrator, Adobe InDesign</span>
     
                 </div>
     
             </div>
     
-            <a class="button2" href="portfolio.html">Full Portfolio</a>
+            <a class="wide-button" href="portfolio.html">Full Portfolio</a>
     
         </section>
     
@@ -167,14 +173,17 @@
     
             <a class="anchor" id="contact-section"></a>
     
-            <p>
-                I am currently open to work.  Please email me at <a href="mailto:joelleshapiro@gmail.com">joelleshapiro@gmail.com</a> if you'd like to get in touch! You can also take a look at my resume or find me on LinkedIn and GitHub through the links below.
-                <a class="button2" href="images/resume-joelle-shapiro.pdf">View Resume</a>
-            </p>
-    
+            <div class="contact-blurb">
+                <p>
+                    I am currently open to work.  Please email me at <a href="mailto:joelleshapiro@gmail.com">joelleshapiro@gmail.com</a> if you'd like to get in touch! You can also take a look at my resume or find me on LinkedIn and GitHub through the links below.
+                </p>
+        
+                <a class="wide-button" href="images/resume-joelle-shapiro.pdf">View Resume</a>
+            </div>
+
             <div class="links-out">
-                <a class="button" href="https://github.com/Capricornered"><img src="images/github-logo-red.png" alt="GitHub"></a>
-                <a class="button" href="https://www.linkedin.com/in/joelle-shapiro/"><img src="images/linkedin-logo-red.png" alt="LinkedIn"></a>
+                <a class="round-button-light" href="https://github.com/Capricornered"><img src="images/github-logo-blue.png" alt="GitHub"></a>
+                <a class="round-button-light" href="https://www.linkedin.com/in/joelle-shapiro/"><img src="images/linkedin-logo-blue.png" alt="LinkedIn"></a>
             </div>
     
         </section>

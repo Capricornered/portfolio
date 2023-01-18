@@ -2,15 +2,15 @@
 
 let nav = document.getElementById("menu");
 let hamburger = document.getElementById("hamburger");
-hamburger.src = "images/hamburger-01.svg";
+hamburger.src = "images/hamburger.png";
 
 hamburger.onclick = function() {
     if (nav.classList.contains("out")) {
         nav.classList.remove("out");
-        hamburger.src = "images/hamburger-01.svg"
+        hamburger.src = "images/hamburger.png"
     } else {
         nav.classList.add("out");
-        hamburger.src = "images/x-out.svg"
+        hamburger.src = "images/x-out.png"
     }
 }
 
@@ -19,7 +19,7 @@ let menuItems = document.getElementsByClassName("menu-item");
 for (let i = 0; i < menuItems.length; i++) {
     menuItems[i].onclick = function() {
         nav.classList.remove("out");
-        hamburger.src = "images/hamburger-01.svg"
+        hamburger.src = "images/hamburger.png"
     }
 }
 
@@ -35,7 +35,6 @@ leftArrow.onclick = function left() {
 
 rightArrow.onclick = function right() {
     featureBox.scrollLeft += 300;
-    return true;
 };
 
 function featureScroll() {
